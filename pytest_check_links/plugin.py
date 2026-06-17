@@ -445,7 +445,9 @@ class LinkItem(pytest.Item):
                 self.uncache_url(url_no_anchor)
                 return self.fetch_with_retries(url, retries=retries - 1)
 
-            if hasattr(session, "cache") and not session_caches_status(session, response.status_code):
+            if hasattr(session, "cache") and not session_caches_status(
+                session, response.status_code
+            ):
                 self.uncache_url(url_no_anchor)
 
             error = f"{response.status_code}: {response.reason}"
