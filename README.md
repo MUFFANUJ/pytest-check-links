@@ -125,6 +125,12 @@ on the backend.
 
 Values will be parsed as JSON first.
 
+For example:
+
+```bash
+--check-links-cache-backend-opt allowable_codes:[200]
+```
+
 ## Code Styling
 
 `pytest-check-links` has adopted automatic code formatting so you shouldn't
